@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :transactions
   end
 
-  resources :transactions
+  resources :transactions, only: :index
 end
