@@ -5,8 +5,7 @@ class TransactionsController < ApplicationController
 
   # GET /category/:category_id/transactions
   def index
-    @transactions = params[:category_id] ? @category.transactions.all : current_user.transactions.all
-
+    @transactions = set_transactions
     render json: @transactions
   end
 
@@ -49,6 +48,10 @@ class TransactionsController < ApplicationController
 
   def set_transaction
     @transaction = @category.transactions.find(params[:id])
+  end
+
+  def set_transactions
+    params[:category_id] ? @category.transactions.all : current_user.transactions.all
   end
 
   # Only allow a trusted parameter "white list" through.
