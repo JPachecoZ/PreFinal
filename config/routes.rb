@@ -9,6 +9,4 @@ Rails.application.routes.draw do
   resources :categories do
     resources :transactions
   end
-
-  resources :transactions, only: :index
 end
