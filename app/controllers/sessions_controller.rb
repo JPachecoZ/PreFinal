@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user = User.valid_login?(params[:email], params[:password])
     if user
       user.update_token
-      render json: { token: user.token }
+      render json: user
     else
       render_unauthorized('Incorrect email or password')
     end
