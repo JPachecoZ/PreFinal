@@ -111,7 +111,7 @@ transactions_data = {
   ]
 }
 
-0.upto(13) do |n|
+1.upto(40) do |n|
   user_data[:email] = "test#{n}@mail.com"
   user = User.create(**user_data)
   categories = categories_data.map { |category_data| user.categories.create(**category_data) }
