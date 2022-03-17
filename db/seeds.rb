@@ -1,5 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+puts "Start seeding data"
 
 User.destroy_all
 
@@ -11,14 +12,14 @@ user_data = {
 }
 
 categories_data = [
-  { name: 'Salary', transaction_type: 'income' },
-  { name: 'Independent', transaction_type: 'income' },
-  { name: 'Food', transaction_type: 'expense' },
-  { name: 'Transportation', transaction_type: 'expense' },
-  { name: 'Utilities', transaction_type: 'expense' },
-  { name: 'Education', transaction_type: 'expense' },
-  { name: 'Entertainment', transaction_type: 'expense' },
-  { name: 'Other', transaction_type: 'expense' }
+  { name: 'Salary', transaction_type: 'income', color: "green", icon: "bank" },
+  { name: 'Independent', transaction_type: 'income', color: "teal", icon: "bill" },
+  { name: 'Food', transaction_type: 'expense', color: "orange", icon: "cart" },
+  { name: 'Transportation', transaction_type: 'expense', color: "blue", icon: "car" },
+  { name: 'Utilities', transaction_type: 'expense', color: "yellow", icon: "bill" },
+  { name: 'Education', transaction_type: 'expense', color: "cyan", icon: "education" },
+  { name: 'Entertainment', transaction_type: 'expense', color: "red", icon: "game" },
+  { name: 'Other', transaction_type: 'expense', color: "light-blue", icon: "bill" }
 ]
 
 transactions_data = {
