@@ -1,5 +1,5 @@
 class CategorySerializer < ActiveModel::Serializer
-  attributes :id, :name, :transaction_type, :transactions
+  attributes :id, :name, :transaction_type, :color, :icon, :transactions
 
   def transactions
     object.transactions.map do |transaction|
